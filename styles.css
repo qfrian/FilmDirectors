@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.hero {
+  background-image: url('https://t4.ftcdn.net/jpg/03/70/70/61/360_F_370706184_7O4w4OXUBWsV0KC8a2qi2RNXvAsJKWxH.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.hero-title, .hero-subtitle {
+  z-index: 2;
+  font-family: 'Cinzel', serif;
+  animation: fadeInDown 2s ease-out forwards;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+.directors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: #1e1e1e;
+  gap: 2rem;
+}
+
+.director-card {
+  background: #2b2b2b;
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.director-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  height: 300px;
+  object-fit: cover;
+}
+
+.director-card h2 {
+  font-family: 'Cinzel', serif;
+  margin-bottom: 0.5rem;
+}
+
+.director-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+footer {
+  background: #000;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
